@@ -14,9 +14,10 @@ body {
 
 /*hr*/
 hr.top {
+    transform: translate(-50%);
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     margin-top: 3em;
     border: none;
     background-color: #00ff00;
@@ -69,7 +70,6 @@ hr.main{
     align-items: center;
     flex-direction: column;
     z-index: 1;
-    width: 150vh;
     text-align: center;
     margin-bottom: 9em;
     margin-top: 1em;
@@ -207,6 +207,40 @@ hr.main{
     font-size: large;
 }
 
+
+
+
+
+
+@media (max-width: 800px) {
+    hr.sideRight{
+        margin-right: -6.3em;
+        background-color: #8b13a0;
+    }
+    hr.sideLeft{
+        margin-left: -6.3em;
+        background-color: #8b13a0;
+    }
+    hr.top{
+        width: 140%;
+        background-color: #8b13a0;
+    }
+}
+
+@media (max-width: 700px){
+    hr.sideRight{
+        margin-top: 7.5em;
+        height: 65vh;
+    }
+    hr.sideLeft{
+        margin-top: 7.5em;
+        height: 65vh;
+    }
+    hr.top{
+        margin-top: 5em;
+        background-color: #a08113;
+    }
+}
 
 
 
