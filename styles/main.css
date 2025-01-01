@@ -73,8 +73,8 @@ hr.main{
     text-align: center;
     margin-bottom: 9em;
     margin-top: 1em;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-left: 40%;
+    transform: translateX(-35%);
 }
 #navbar{
     z-index: 2;
