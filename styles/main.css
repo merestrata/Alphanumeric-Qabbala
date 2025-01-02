@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
-    color: red;
+    color: #00ff00;
 }
 
 
@@ -56,8 +56,15 @@ hr.main{
     height: 3px;
     border-radius: 100em;
 }
-
-
+hr.profileHR {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: none;
+    background-color: #00ff00;
+    width: 40%;
+    height: 3px;
+    border-radius: 100em;
+}
 
 
 
@@ -73,8 +80,9 @@ hr.main{
     text-align: center;
     margin-bottom: 9em;
     margin-top: 1em;
-    margin-left: 40%;
-    transform: translateX(-35%);
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 #navbar{
     z-index: 2;
@@ -90,14 +98,14 @@ hr.main{
 
 /*Navbar*/
 #navbar ul{
+    background-color: #3d3d3d;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: transparent;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-radius: 2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    border-radius: 1em;
     margin-bottom: -1em;
 }
 #navbar li{
@@ -106,15 +114,15 @@ hr.main{
     margin-right: 1em;
     background-color: #00ff00;
     text-align: center;
-    border-radius: 1em;
+    border-radius: 0.7em;
+    cursor: pointer;
+
 }
 #navbar li:hover{
     background-color: #00b300;
-    cursor: pointer;
 }
 #navbar li:active{
     background-color: #006600;
-    cursor: pointer;
 }
 #navbar img{
     width: 30px;
@@ -156,55 +164,255 @@ hr.main{
 #scrollmenu a:hover {
     background-color: #006600;
 }
-
+.fadeLeft{
+    position: absolute;
+    top: 0;
+    margin-left: -1px;
+    margin-top: 70px;
+    width: 50px;
+    height: 43px;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(to right, #121212, rgba(255, 255, 255, 0));
+}
+.fadeRight{
+    position: absolute;
+    top: 0;
+    margin-left: -1px;
+    margin-top: 70px;
+    width: 50px;
+    height: 43px;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(to left, #121212, rgba(255, 255, 255, 0));
+}
+#content div#changeMenu{
+    position: absolute;
+    background-color: #00ff00;
+    border-top: #00ff00 solid 4px;
+    border-left: #00ff00 solid 5px;
+    border-right: #00ff00 solid 5px;
+    top: 0;
+    margin-left: 500px;
+    margin-top: 58px;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+#content div#changeMenu:hover{
+    background-color: #00b300;
+    border-top: #00b300 solid 4px;
+    border-left: #00b300 solid 5px;
+    border-right: #00b300 solid 5px;
+}
+#content div#changeMenu:active{
+    background-color: #006600;
+    border-top: #006600 solid 4px;
+    border-left: #006600 solid 5px;
+    border-right: #006600 solid 5px;
+}
+#content #changeMenu img{
+    width: 30px;
+    height: 30px;
+}
 
 #content .profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em; /* Adjust the gap between elements as needed */   
+}
+
+#content .profile-main{
     margin-top: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-#content .profile img{
+#content .profile-main img{
     width: 200px;
     height: 200px;
     border-radius: 100em;
     border: #00ff00 3px solid;
     margin-bottom: 0.5em;
 }
-
-#content .profile .profile-info {
-    margin-top: 2em;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-left: 6em;
-    margin-bottom: 1em;
-}
-
-#content .profile .profile-info > div {
-    text-align: left;
-    flex: 1;
-    margin: 0 3em;
-    width: 11em;
-}
-
-#content .profile .options {
-    margin-top: 2em;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-#content .profile .options > button {
-    padding: 1em;
+#content .profile-main .profile-date{
     margin-top: 1em;
+}
+#content .profile-main .profile-favAQ{
+    margin-top: 1em;
+}
+#content .profile-main .profile-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em; /* Adjust the gap between elements as needed */
+}
+#content .profile-main .profile-name h4, #content .profile-main.profile-name h2 {
+    margin: 0;
+}
+
+#content .profile-left{
+    background-color: #3d3d3d;
+    border-radius: 1em;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    margin-bottom: 5em;
+}
+#content .profile-right{
+    background-color: #3d3d3d;
+    border-radius: 1em;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    margin-bottom: 5em;
+}
+
+#content .profile .profile-bottom{
+    display: none;
+    margin-top: 2em;
+}
+#content .profile .profile-bottom .profile-left{
+    background-color: #3d3d3d;
+    border-radius: 1em;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    margin-bottom: 5em;
+    display: inline-block;
+    margin-right: 2em;
+}
+#content .profile .profile-bottom .profile-right{
+    background-color: #3d3d3d;
+    border-radius: 1em;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    margin-bottom: 5em;
+    display: inline-block;
+    margin-left: 2em;
+}
+
+#content .post-container{
+    width: 90%;
+}
+#content .post-container hr {
+    border: none;
+    background-color: #00ff00;
+    height: 3px;
+    border-radius: 100em;
+}
+#content .post-container .post{
+    text-align: left;
+}
+#content .post-container .post .author{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#content .post-container .post .author img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    margin-right: 0.7em;
+}
+#content .post-container .post .author h3{
+    margin-right: 0.7em;
+}
+#content .post-container .post .post-content{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left: 80px;
+}
+#content .post-container .post .post-content .post-AQ{
+    margin-bottom: 1em;
+}
+
+#content button.add{
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 2em;
     background-color: #00ff00;
     border: none;
     border-radius: 1em;
     font-weight: 700;
-    font-size: large;
+    font-size: medium;
+    cursor: pointer;
+}
+#content button.add:hover{
+    background-color: #00b300;
+}
+#content button.add:active{
+    background-color: #006600;
+}
+
+#content #feed{
+    width: 90%;
+}
+#content #feed hr {
+    border: none;
+    background-color: #00ff00;
+    height: 3px;
+    border-radius: 100em;
+}
+#content #feed .post{
+    text-align: left;
+}
+#content #feed .post .author{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#content #feed .post .author img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    margin-right: 0.7em;
+}
+#content #feed .post .author h3{
+    margin-right: 0.7em;
+}
+#content #feed .post .post-content{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left: 80px;
+}
+#content #feed .post .post-content .post-AQ{
+    margin-bottom: 1em;
+}
+
+
+
+
+.settings-popup {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    border-radius: 2em;
+
+}
+
+.settings-menu {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+
 }
 
 
@@ -212,37 +420,56 @@ hr.main{
 
 
 
-@media (max-width: 800px) {
+/*Sizes and Reponsiveness*/
+@media (max-width: 850.5px) {
     hr.sideRight{
-        margin-right: -6.3em;
-        background-color: #8b13a0;
+        display: none;
     }
     hr.sideLeft{
-        margin-left: -6.3em;
-        background-color: #8b13a0;
+        display: none;
     }
     hr.top{
-        width: 140%;
-        background-color: #8b13a0;
+        width: 100%;
+    }
+    #content{
+        width: 90%;
     }
 }
 
-@media (max-width: 700px){
-    hr.sideRight{
-        margin-top: 7.5em;
-        height: 65vh;
+@media (max-width: 540.5px) {    
+    #content .profile{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em; /* Adjust the gap between elements as needed */   
     }
-    hr.sideLeft{
-        margin-top: 7.5em;
-        height: 65vh;
+
+    #content .profile .profile-bottom{
+        display: block;
     }
+
+    #content .profile .profile-left{
+        display: none;
+    }    
+    #content .profile .profile-right{
+        display: none;
+    }
+}
+
+@media (max-width: 387.5px){
     hr.top{
         margin-top: 5em;
-        background-color: #a08113;
     }
+    .fadeLeft{
+        margin-top: 107px;
+        height: 43px;
+    }
+    .fadeRight{
+        margin-top: 107px;
+        height: 43px;
+    }
+    
 }
-
-
 
 
 

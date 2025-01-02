@@ -3,39 +3,58 @@ window.onload = function() {
     scrollmenu.scrollLeft = (scrollmenu.scrollWidth - scrollmenu.clientWidth) / 2;
 };
 
-
 const scrollmenu = document.getElementById('scrollmenu');
-const scrollmenuBefore = document.createElement('div');
-scrollmenuBefore.style.position = 'absolute';
-scrollmenuBefore.style.top = '0';
-scrollmenuBefore.style.marginLeft = '-1px';
-scrollmenuBefore.style.marginTop = '70px';
-scrollmenuBefore.style.width = '50px';
-scrollmenuBefore.style.height = '43px';
-scrollmenuBefore.style.pointerEvents = 'none';
-scrollmenuBefore.style.zIndex = '1';
-scrollmenuBefore.style.background = 'linear-gradient(to right, #121212, rgba(255, 255, 255, 0))';
-document.body.appendChild(scrollmenuBefore);
 
-const scrollmenuAfter = document.createElement('div');
-scrollmenuAfter.style.position = 'absolute';
-scrollmenuAfter.style.top = '0';
-scrollmenuAfter.style.marginRight = '-1px';
-scrollmenuAfter.style.marginTop = '70px';
-scrollmenuAfter.style.width = '50px';
-scrollmenuAfter.style.height = '43px';
-scrollmenuAfter.style.pointerEvents = 'none';
-scrollmenuAfter.style.zIndex = '1';
-scrollmenuAfter.style.background = 'linear-gradient(to left, #121212, rgba(255, 255, 255, 0))';
-document.body.appendChild(scrollmenuAfter);
+const scrollmenuLeft = document.createElement('div');
+scrollmenuLeft.classList.add('fadeLeft');
+document.body.appendChild(scrollmenuLeft);
+
+const scrollmenuRight = document.createElement('div');
+scrollmenuRight.classList.add('fadeRight');
+document.body.appendChild(scrollmenuRight);
 
 function updateBeforePosition() {
     const rect = scrollmenu.getBoundingClientRect();
-    scrollmenuBefore.style.left = `${rect.left}px`;
-    scrollmenuAfter.style.right = `${rect.left}px`;
+    scrollmenuLeft.style.left = `${rect.left}px`;
+    scrollmenuRight.style.right = `${rect.left}px`;
 
 }
 
 scrollmenu.addEventListener('scroll', updateBeforePosition);
 window.addEventListener('resize', updateBeforePosition);
 window.addEventListener('load', updateBeforePosition);
+
+
+
+
+
+
+
+
+document.getElementById('changeMenu').addEventListener('click', function() {
+    document.querySelector('.settings-popup').style.display = 'flex';
+    // document.querySelector('.fadeLeft').style.display = 'none';
+    // document.querySelector('.fadeRight').style.display = 'none';
+    document.getElementById('navbar').style.filter = "brightness(0.4)";
+    document.getElementById('navbar').style.pointerEvents = "none";
+    document.getElementById('content').style.filter = "brightness(0.4)";
+    document.getElementById('content').style.pointerEvents = "none";
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.querySelector('.settings-popup').style.display = 'none';
+    // document.querySelector('.fadeLeft').style.display = 'block';
+    // document.querySelector('.fadeRight').style.display = 'block';
+    document.getElementById('navbar').style.filter = "brightness(1)";
+    document.getElementById('navbar').style.pointerEvents = "visible";
+    document.getElementById('content').style.filter = "brightness(1)";
+    document.getElementById('content').style.pointerEvents = "visible";
+
+});
+
+
+
+
+
+
+
