@@ -21,6 +21,40 @@
 
     <div id="content">
         <h1>Archive</h1>
+
+        <div id="search-source">
+            <label for="search">Source</label>
+            <input type="number" id="search" name="search" placeholder="Ex: 333" oninput="sumCalculation(); phraseCalculation();">
+        </div>
+
+        <div id="search-box">
+            <div id="search-theme">
+                <label for="search">Book/Theme</label>
+                <input type="number" id="search" name="search" placeholder="Ex: 333" oninput="sumCalculation(); phraseCalculation();">
+            </div>
+
+            <div id="search-number">
+                <label for="search">Search Sum</label>
+                <input type="number" id="search" name="search" placeholder="Ex: 333" oninput="sumCalculation(); phraseCalculation();">
+            </div>
+
+            <div id="search-text">
+                <label for="search">Search Sum</label>
+                <input type="number" id="search" name="search" placeholder="Ex: 333" oninput="sumCalculation(); phraseCalculation();">
+            </div>
+        </div>
+
+        <hr class="searchHR">
+
+        <div id="options-box">
+            <h4 id="random" onclick="randomDisplay()">Random</h4>
+            <h4 id="all" onclick="changeDisplay()">See All</h4>
+            <h4 id="info" onclick="infoDisplay()">Info</h4>
+            <center>
+                <div id="allSug"><p>(Use Ctrl+F to search directly)</p></div>
+            </center>
+        </div>
+        
     </div>
 
     <script src="scripts/main.js"></script>

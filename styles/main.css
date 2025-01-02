@@ -65,6 +65,15 @@ hr.profileHR {
     height: 3px;
     border-radius: 100em;
 }
+hr.searchHR {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: none;
+    background-color: #00ff00;
+    width: 70%;
+    height: 3px;
+    border-radius: 100em;
+}
 
 
 
@@ -387,6 +396,60 @@ hr.profileHR {
 }
 
 
+#content #search-source{
+    margin-top: 1em;
+}
+#content #search-box{
+    margin-top: 1em;
+}
+#content #search-theme{
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#content #search-number{
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#content #search-text{
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+#content label{
+    display: block;
+}
+#content input{
+    background-color: #3d3d3d;
+    border: 3px solid #00ff00;
+    outline: none;
+    padding: 0.3em;
+    color: #00ff00;
+}
+#content input::placeholder{
+    color: #00ff00;
+}
+
+
+#options-box{
+    margin-top: -1.8em;
+    width: 100%;
+}
+#random{
+    display: inline-block;
+}
+#all{
+    display: inline-block;
+    margin-left: 27%;
+    margin-right: 27%;
+}
+#info{
+    display: inline-block;
+}
+
 
 
 .settings-popup {
@@ -404,7 +467,6 @@ hr.profileHR {
     border-radius: 2em;
 
 }
-
 .settings-menu {
     background-color: white;
     padding: 2em;
@@ -414,7 +476,6 @@ hr.profileHR {
     z-index: 3;
 
 }
-
 
 
 
@@ -501,3 +562,5 @@ hr.profileHR {
     display: block;
     background: transparent;
 }
+
+
